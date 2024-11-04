@@ -1,3 +1,5 @@
+@charset 'UTF-8';
+
 * {
   margin: 0;
   padding: 0;
@@ -48,18 +50,4 @@ body {
 
 .header a.active {
   background-color: gray;
-}
-
-.container {
-  margin-top: 10px;
-}
-
-.Titre h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-
-.Titre p {
-  font-size: 18px;
-  color: #d1d1d1;
 }

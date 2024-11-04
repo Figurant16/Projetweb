@@ -12,7 +12,10 @@ body {
   height: 100vh;
   background: linear-gradient(135deg, #1e1e1e, #282828);
   color: white;
-  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px;
 }
 
 .header {
