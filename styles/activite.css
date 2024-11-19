@@ -18,6 +18,10 @@ body {
   margin: 50px;
 }
 
+body h2 {
+	font-weight: 700;
+}
+
 .header {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
@@ -29,26 +33,79 @@ body {
   align-items: center; 
 }
 
-.header a {
-  color: white;
-  text-align: center;
-  padding: 12px 20px;
-  text-decoration: none;
-  font-size: 18px;
-  border-radius: 4px;
-  transition: background-color 0.3s, color 0.3s;
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
 }
 
-.header a.logo {
-  font-size: 25px;
-  font-weight: bold;
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
 }
 
-.header a:hover {
-  background-color: #ddd;
-  color: black;
+nav a.active {
+    color: #ff6347;
 }
 
-.header a.active {
-  background-color: gray;
+/* Main Section */
+main {
+    padding: 40px 20px;
+}
+
+.activities {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.activity {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activity:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.activity h2 {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.activity-image img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #ddd;
+}
+
+.activity-details {
+    padding: 20px;
+    background-color: #f7f7f7;
+}
+
+.activity-details p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.activity-details strong {
+    font-weight: bold;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .activities {
+        grid-template-columns: 1fr;
+    }
 }
