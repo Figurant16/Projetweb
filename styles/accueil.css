@@ -38,12 +38,7 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-.header a.logo {
-  font-size: 25px;
-  font-weight: bold;
-}
-
-.header a:hover {
+.header .selector a:hover {
   background-color: #ddd;
   color: black;
 }
@@ -56,13 +51,90 @@ body {
   margin-top: 10px;
 }
 
+/* Style de la boîte du logo */
+.logo-box {
+  display: inline-block; /* Assure une disposition appropriée */
+  text-decoration: none; /* Retire tout soulignement */
+  transition: transform 0.3s, box-shadow 0.3s; /* Ajoute des transitions pour un effet esthétique */
+}
+
+/* Style pour l'image du logo */
+.logo {
+  width: 100px; /* Taille du logo */
+  height: auto; /* Garde les proportions */
+  border: none; /* Retire toute bordure par défaut */
+  border-radius: 10px; /* Ajoute des coins arrondis */
+  transition: transform 0.3s, box-shadow 0.3s; /* Effet esthétique au survol */
+}
+
+/* Effet de survol pour donner un meilleur design */
+.logo-box:hover .logo {
+  transform: scale(1.1); /* Agrandit légèrement le logo */
+}
+
+
 .Titre h1 {
   font-size: 36px;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .Titre p {
   font-size: 18px;
   color: #d1d1d1;
   text-align: center;
+}
+
+.large-logo {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.large-logo img {
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.video-section {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.video-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #d1d1d1;
+}
+
+.presentation {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  color: white;
+  text-align: center;
+}
+
+.presentation h2 {
+  font-size: 28px;
+  color: ghostwhite;
+  margin-bottom: 15px;
+}
+
+.presentation p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.video-section {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.video-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #d1d1d1;
 }
