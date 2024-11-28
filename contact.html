@@ -2,9 +2,10 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - ScreamLand</title>
     <link rel="stylesheet" href="styles/contact.css">
     <link rel="stylesheet" href="styles/global.css">
-    <title>ScreamLand</title>
 </head>
 <body>
     <div class="header">
@@ -19,7 +20,60 @@
             </nav>
         </div>
     </div>
- 
+
+    <main>
+        <!-- Conteneur pour les informations et la carte -->
+        <div class="contact-details">
+            <!-- Bloc des informations de contact -->
+            <section class="contact-info">
+                <h2>Informations de contact</h2>
+                <p><strong>Adresse :</strong> 123 Rue de l'Imaginaire, 75000 Paris, France</p>
+                <p><strong>Téléphone :</strong> +33 1 23 45 67 89</p>
+                <p><strong>Email :</strong> contact@screamland.fr</p>
+            </section>
+
+            <!-- Bloc de la carte -->
+            <section class="map-section">
+                <h2>Localisation</h2>
+                <iframe
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=2.3122,48.8566,2.3522,48.8766&amp;layer=mapnik"
+                    width="100%"
+                    height="300"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </section>
+        </div>
+    
+        <!-- Bloc du formulaire centré -->
+        <section class="contact-form">
+            <h2>Réserver une activité</h2>
+            <form action="#" method="post">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="activity">Activité :</label>
+                <select id="activity" name="activity" required>
+                    <option value="haunted-house">Maison Hantée</option>
+                    <option value="roller-coaster">Montagnes Russes</option>
+                    <option value="escape-room">Escape Room</option>
+                </select>
+    
+                <label for="date">Date :</label>
+                <input type="date" id="date" name="date" required>
+    
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+    
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </main>
+
     <footer>
         <div class="footer-container">
             <div class="footer-section">
@@ -49,5 +103,6 @@
         <div class="footer-bottom">
             <p>&copy; 2024 Projet ScreamLand. Tous droits réservés.</p>
         </div>
-    </footer>    
+    </footer>
+</body>
 </html>
