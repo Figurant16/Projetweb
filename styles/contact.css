@@ -1,2 +1,138 @@
-@charset 'UTF-8';
+/* Styles de base */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
 
+section {
+  background-color: #3A3F44;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Titres avec style commun */
+.contact-info h2,
+.map-section h2,
+.contact-form h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #F5F5F5;
+}
+
+.contact-info p {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.contact-info,
+.map-section,
+.contact-form {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* Effet au passage de la souris */
+.contact-info:hover,
+.map-section:hover,
+.contact-form:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+
+/* Carte */
+.map-section iframe {
+  border-radius: 10px;
+}
+
+/* Formulaire */
+.contact-form {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form label {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea,
+.contact-form button {
+  font-size: 16px;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background-color: gray;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: rgb(147, 147, 147);
+}
+
+/* Conteneur pour les détails de contact */
+.contact-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.contact-info, 
+.map-section {
+  flex: 1;
+  min-width: 300px;
+  max-width: 48%;
+}
+
+.contact-info {
+  padding: 30px;
+  line-height: 1.8;
+}
+
+.contact-info p {
+  margin-bottom: 15px;
+}
+
+/* Requêtes média */
+@media (max-width: 768px) {
+  section {
+    margin: 0 auto;
+  }
+
+  .contact-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info, 
+  .map-section {
+    max-width: 100%;
+  }
+
+  .contact-form button {
+    width: 100%;
+  }
+}
